@@ -1,0 +1,38 @@
+body{
+  @include center;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient($up-color, $down-color);
+  font-family: $base-font;
+  font-size: 16px;
+}
+
+.container-newsletter{
+    color: $white-color;
+    font-size: 2rem;
+    &--form{
+        @include flex-row;
+        border: 1px solid $white-color;
+        border-radius: 1.5rem;
+        padding:1.5rem;
+    }
+
+    &--input{
+        &__email,
+        &__button,
+        &__email::placeholder
+        {
+        background-color: transparent;
+        border: none;
+        color:$white-color;
+        }
+        &__email::placeholder{
+            font-weight: light;
+        }
+        &__button{
+            font-weight: bold;
+        }
+
+    }
+}
+
